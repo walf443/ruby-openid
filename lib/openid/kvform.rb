@@ -14,7 +14,7 @@ module OpenID
       #
       # returns a string representation of the sequence
       err = lambda { |msg|
-        msg = "seq_to_kv warning: #{msg}: #{seq[0,100].inspect}"
+        msg = "seq_to_kv warning: #{msg}: #{seq.inspect[0, 100]}"
         if strict
           raise KVFormError, msg
         else
